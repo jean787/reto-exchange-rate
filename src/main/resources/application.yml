@@ -1,0 +1,31 @@
+server:
+  port: 9091
+
+spring:
+  application:
+    name: exchange-rate-v1
+  datasource:
+    name: tipo_cambio
+    url: jdbc:h2:mem:dbtipocambio
+    username: sa
+    password:
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    show-sql: true
+    defer-datasource-initialization: true
+  h2:
+    console:
+      enabled: true
+  sql:
+    init:
+      mode: always
+
+jwt:
+  secret: 586S3272357838782F413F7428472B4U4550655568666B597033733676397524
+
+rest:
+  endpoints:
+    exchangeRate:
+      url: https://open.er-api.com/
+
+
